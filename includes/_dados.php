@@ -2,7 +2,7 @@
 $produtos= array(0=> array('nome'=>'Allan Patrick','preco'=>' 16000','descricao'=>' Classe','imagem'=>'Alan Patrick.jpg'),
                  1=> array('nome'=>'Neymar','preco'=>' 20000','descricao'=>' Coringa','imagem'=>'Neymar.jpg'),
                  2=> array('nome'=>'Wanderson','preco'=>' 50000','descricao'=>' Craque','imagem'=>'Wanderson.webp'),
-                 3=> array('nome'=>'S.C. Internacional','preco'=>' 70000','descricao'=>' Gigante','imagem'=>'Internacional.png'),
+                 3=> array('nome'=>'S.C. Internacional','preco'=>' 70000','descricao'=>' O maior de TODOS','imagem'=>'Internacional.png'),
                  4=> array('nome'=>'Messi','preco'=>' 20000','descricao'=>' E.T. melhor da história','imagem'=>'Messi.webp'),
                  5=> array('nome'=>'Vasco da Gama','preco'=>' 30000','descricao'=>' Gigante da colina','imagem'=>'Vasco da Gama.png'),
                  6=> array('nome'=>'Brasil','preco'=>' 50000','descricao'=>' Hexa 2022','imagem'=>'Brasil.webp'),
