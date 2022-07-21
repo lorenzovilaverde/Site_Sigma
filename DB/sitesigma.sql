@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 07-Jul-2022 às 16:57
+-- Tempo de geração: 21-Jul-2022 às 17:31
 -- Versão do servidor: 10.4.17-MariaDB
 -- versão do PHP: 7.3.27
 
@@ -66,6 +66,23 @@ CREATE TABLE `produtos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Extraindo dados da tabela `produtos`
+--
+
+INSERT INTO `produtos` (`ProdutoID`, `Nome`, `Descricao`, `Imagem`, `Preco`, `CategoriaID`, `Ativo`) VALUES
+(1, 'Allan Patrick', ' Classe', 'Alan Patrick.jpg', 16, 1, 1),
+(2, 'Neymar', ' Coringa', 'Neymar.jpg', 20, 1, 1),
+(3, 'Wanderson', ' Craque', 'Wanderson.webp', 50, 1, 1),
+(4, 'S.C. Internacional', ' O maior de TODOS', 'Internacional.png', 70, 1, 1),
+(5, 'Messi', ' E.T. melhor da história', 'Messi.webp', 20000, 1, 1),
+(6, 'Vasco da Gama', ' Gigante da colina', 'Vasco da Gama.png', 30000, 1, 1),
+(7, 'Brasil', ' Hexa 2022', 'Brasil.webp', 50000, 1, 1),
+(8, 'Futebol', ' Melhor criação do homem', 'Futebol.webp', 35000, 1, 1),
+(9, 'Neymar aos 90', ' Decisivo', 'Neymar 90.webp', 30000, 1, 1),
+(10, 'Messi aos 90', ' Decisivo', 'Messi aos 90.webp', 30000, 1, 1),
+(11, 'HEXA', ' Brasil hexa p0rr4', 'Hexa.jpg', 30000, 1, 1);
+
+--
 -- Índices para tabelas despejadas
 --
 
@@ -95,7 +112,7 @@ ALTER TABLE `categorias`
 -- AUTO_INCREMENT de tabela `produtos`
 --
 ALTER TABLE `produtos`
-  MODIFY `ProdutoID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ProdutoID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
