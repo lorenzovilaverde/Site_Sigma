@@ -1,10 +1,49 @@
 <?php
-include_once '../includes/_banco.php';
-include_once './_header.php';
-include_once './menu.php';
+include_once '../includes/_dados.php';
+include_once '_head.php';
+
+$sql = " SELECT * FROM categorias";
+$resultado = mysqli_query($conexão,$sql);
+$total = mysqli_num_rows($resultado);
+
+include_once '_menu.php';
 ?>
+    <main>
+        <h2>administração das categorias</h2>
+        
+        <a href="categoria-salvar.php">Inserir</a>
+        <hr>
+        <table border = "1">
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Ações</th>
+            </tr>
+            <?php
+            if($resultados){
+                while ($dado = mysqli_fetch_array($resultado)) {
+            ?>
+            <tr>
+                <td><?php echo $dado['CategoriaID'];?></td>
+                <td><a href="categoria-salvar.php?acao=salvar&id=<?php echo $dado['CategoriaID'];?>"><?php echo ['Nome'];?></td>
+                <td><a href="categoria-processa.php?acao=excluir&id=<?php echo $dado['CategoriaID'];?>">Excluir</a></td>
+            </tr>
+            <?php
+                }
+            } else{
+            ?>
+            <tr>
+                <td colspan="3">Resultados não encontrados</td>
+            </tr>
+            <?php
+            }
+            ?>
+            <tr>
+                <td colspan="3">Total de Registros: <?php echo $total;?></td>
+            </tr>
+        </table>
 
-
+    </main>
 <?php
-include_once './_footer.php';
+include_once '_footer.php';
 ?>
