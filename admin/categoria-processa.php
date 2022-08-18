@@ -17,6 +17,16 @@ switch ($acao) {
         $nome = $_POST['nome'];
         $descricao = $_POST['descricao'];
 
+        if($_FILES['foto']['size'] > 0){
+            $uploaddir = '../imagens/categorias/';
+            $extensao = pathinfo($_FILES['foto']['name'], PATHINFO_EXTENSION);
+            $nomearquivo = 'categoria-'.$id.'-'.rand().'.'.$extensao;
+            $uploadfile = $uploaddir . $nomearquivo;
+            move_uploaded_file($FILES['foto']['tmp_name'], $uploadfile);
+        }else{
+            $nomearquivo = $_POST['imagem'];
+        }
+
         if( !isset($_POST['id']) || empty($_POST['id'])){
             $sql = "INSERT INTO `categorias`(`Nome`,`Descricao`) VALUES ('".$nome"','".$descricao."')";
         }else {
