@@ -1,4 +1,5 @@
 <?php
+include_once '_valida.php';
 include_once '../includes/_dados.php';
 include_once '_head.php';
 
@@ -25,7 +26,7 @@ include_once '_menu.php';
             ?>
             <tr>
                 <td><?php echo $dado['CategoriaID'];?></td>
-                <td><a href="categoria-salvar.php?acao=salvar&id=<?php echo $dado['CategoriaID'];?>"><?php echo ['Nome'];?></td>
+                <td><a href="categoria-salvar.php?acao=salvar&id=<?php echo $dado['CategoriaID'];?>"><?php echo $dado ['Nome'];?></a></td>
                 <td><a href="categoria-processa.php?acao=excluir&id=<?php echo $dado['CategoriaID'];?>">Excluir</a></td>
             </tr>
             <?php
